@@ -16,6 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        // @My Code
+        window = UIWindow(frame: UIScreen.main.bounds)  // Define New Window
+        let initalView: InitialViewController = InitialViewController()
+        window?.rootViewController = initalView  //Set View Controller which is an automaticaly generated class as our inatial view
+        window?.makeKeyAndVisible()                     //This make the windows visible
+        //========================
+        
         return true
     }
 
