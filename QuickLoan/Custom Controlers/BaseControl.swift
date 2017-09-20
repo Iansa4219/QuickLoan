@@ -44,7 +44,6 @@ class GetStartedControl: BaseControl{
 }
 
 class ScanDriversLicenseControl: BaseControl{
-    
     override init(frame: CGRect){
         super.init(frame: frame)
     }
@@ -54,7 +53,6 @@ class ScanDriversLicenseControl: BaseControl{
 }
 
 class PhoneNumberControl: BaseControl{
-    
     override init(frame: CGRect){
         super.init(frame: frame)
     }
@@ -64,7 +62,6 @@ class PhoneNumberControl: BaseControl{
 }
 
 class VerifyControl: BaseControl{
-    
     override init(frame: CGRect){
         super.init(frame: frame)
     }
@@ -74,7 +71,6 @@ class VerifyControl: BaseControl{
 }
 
 class DebitCardControl: BaseControl{
-    
     override init(frame: CGRect){
         super.init(frame: frame)
     }
@@ -84,7 +80,6 @@ class DebitCardControl: BaseControl{
 }
 
 class SelectCashControl: BaseControl{
-    
     override init(frame: CGRect){
         super.init(frame: frame)
     }
