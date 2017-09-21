@@ -44,11 +44,32 @@ class InitialViewController : UIController {
         let offerText = offerLabel()
         centerHorizontal(viewObj: offerText)
         verticalByPercent(fromTop: 0.63, viewObj: offerText)
+
         
         
     }
     
 
+//    func textField() {
+//        let textField = UITextField(frame: CGRect (x: 4, y: 4, width: 122, height: 122));
+//        textField.textAlignment = NSTextAlignment.center
+//        textField.textColor = UIColor.blue
+//        textField.borderStyle = UITextBorderStyle.line
+//        textField.autocapitalizationType = UITextAutocapitalizationType.words // If you need any capitalization
+//        self.view.addSubview(textField)
+//        
+//    }
+    
+    
+//    func textView() {
+//        let textView = UITextView(frame: CGRect (x: 4, y: 4, width: 122, height: 122));
+//        textView.textAlignment = NSTextAlignment.center
+//        textView.textColor = UIColor.blue
+//        textView.backgroundColor = UIColor.red
+//        textView.text = "Hello sdhfkdf kdfhjg skdfhg ksdfhjg skfhg f skfhg skfjhgfj hj dfgh sfg kjfngfd"
+//        self.view.addSubview(textView)
+//    }
+    
     
     
     func howItWorkButtonClick(){

@@ -21,6 +21,7 @@ class UIController : UIViewController {
     let spacing: CGFloat = 10
     let border: CGFloat = 2
     
+    let themColor = UIColor(red: 81/255, green: 99/255, blue: 125/255, alpha: 1.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,6 @@ class UIController : UIViewController {
     }
     
     func setBackgroundImage(image: String){
-        
         let screenSize: CGRect = UIScreen.main.bounds
         let backgroundImage = UIImage(named: image)
         let imageView = UIImageView(image: backgroundImage)
@@ -75,7 +75,7 @@ class UIController : UIViewController {
         let xPos: CGFloat = (view.frame.width / 2) - (viewObj.frame.width / 2)
         viewObj.frame.origin.x = xPos
     }
-    //Vertically positioning element by "%" 
+    //Vertically positioning element by "%"
     func verticalByPercent(fromTop: CGFloat, viewObj: UIView){
         var yPos: CGFloat = (view.frame.height * fromTop) + top + border;
         if(fromTop == 0.50){
@@ -86,12 +86,14 @@ class UIController : UIViewController {
     
     //How it work Button
     func howItWorkButton(frame: CGRect, buttonName: String) -> UIButton{
+        let image = UIImage(named: "button-sm")
         let button = UIButton(type: UIButtonType.system)
-        button.backgroundColor = UIColor.brown
+        button.setBackgroundImage(image, for: UIControlState.normal)
+        //button.backgroundColor = themColor
         button.tintColor = UIColor.white
         button.setTitle("How It Work", for: UIControlState.normal)
         button.addTarget(self, action: #selector(InitialViewController.howItWorkButtonClick), for: UIControlEvents.touchUpInside)
-        button.frame = CGRect(x: 0, y: 0, width: 150, height: 50)
+        button.frame = CGRect(x: 0, y: 0, width: 150, height: 43)
         view.addSubview(button)
         return button
     }
@@ -111,12 +113,14 @@ class UIController : UIViewController {
     
     //Get Start Button
     func getStartButton(frame: CGRect, buttonName: String) -> UIButton{
+        let image = UIImage(named: "button-sm-blank")
         let button = UIButton(type: UIButtonType.system)
-        button.backgroundColor = UIColor.brown
-        button.tintColor = UIColor.white
+        //button.backgroundColor = themColor
+        button.tintColor = themColor
         button.setTitle("Get Started", for: UIControlState.normal)
+        button.setBackgroundImage(image, for: UIControlState.normal)
         button.addTarget(self, action: #selector(InitialViewController.getStartButtonClick), for: UIControlEvents.touchUpInside)
-        button.frame = CGRect(x: 0, y: 0, width: 150, height: 50)
+        button.frame = CGRect(x: 0, y: 0, width: 150, height: 43)
         view.addSubview(button)
         return button
     }
@@ -136,36 +140,49 @@ class UIController : UIViewController {
     
     //Overdraft Protaction Button
     func overDraftProtactionButton() -> UIButton{
+        let image = UIImage(named: "button-lg")
         let button = UIButton(type: UIButtonType.system)
-        button.backgroundColor = UIColor.brown
+        button.setBackgroundImage(image, for: UIControlState.normal)
+        //button.backgroundColor = themColor
         button.tintColor = UIColor.white
         button.setTitle("Overdraft Protection", for: UIControlState.normal)
         button.addTarget(self, action: #selector(InitialViewController.overDraftProtactionButtonClick), for: UIControlEvents.touchUpInside)
-        button.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
+        button.frame = CGRect(x: 0, y: 0, width: 200, height: 47)
         view.addSubview(button)
         return button
     }
     
     //Get Cash First Label
     func getCachFirstLabel() -> UILabel{
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
         label.center = CGPoint(x: 160, y: 285)
         label.textAlignment = .center
-        label.textColor = UIColor.blue
-        label.text = "Get $40.00 cash Fast"
+        label.textColor = themColor
+        label.font = label.font?.withSize(20)
+        label.text = "Get $40.00 cash \nFast"
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        label.numberOfLines = 2
         self.view.addSubview(label)
         return label
     }
     
     //Offer Label
     func offerLabel() -> UILabel{
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 350, height: 100))
         label.center = CGPoint(x: 160, y: 285)
         label.textAlignment = .center
-        label.textColor = UIColor.blue
-        label.text = "Draft let the back get $35.00 in overdraft fees. get cash now, change your cold later"
+        label.textColor = themColor
+        label.font = label.font?.withSize(20)
+        
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        label.numberOfLines = 3
+        
+        label.backgroundColor = UIColor(red: 81/255, green: 99/255, blue: 125/255, alpha: 0)
+        label.text = "Draft let the back get $35.00 in \noverdraft fees. get cash now, \nchange your cold later"
         self.view.addSubview(label)
         return label
     }
+    
+
     
 }
