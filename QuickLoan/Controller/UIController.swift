@@ -183,6 +183,28 @@ class UIController : UIViewController {
         return label
     }
     
-
     
+    //=============================================================GET START ELEMENT===============================================================
+
+    func logoSm(frame: CGRect, imageName: String) ->UIImageView{
+        let image = UIImage(named: imageName)
+        let imageView = UIImageView(image: image)
+        imageView.frame = frame
+        view.addSubview(imageView)
+        return imageView
+    }
+    
+    func logoSm(xPos: CGFloat, yPos: CGFloat, width: CGFloat, height: CGFloat, imageName: String) ->UIImageView{
+        let imageView = logoSm(frame: CGRect(x: 0, y: 0, width: width, height: height), imageName: imageName);
+        var xPos = xPos;
+        if(xPos == 0.50){
+            centerHorizontal(viewObj: imageView)
+        }
+        else{
+            xPos = view.frame.width * xPos;
+            imageView.frame.origin.x = xPos;
+        }
+        verticalByPercent(fromTop: yPos, viewObj: imageView)
+        return imageView
+    }
 }
