@@ -186,16 +186,15 @@ class UIController : UIViewController {
     
     //=============================================================GET START ELEMENT===============================================================
 
-    func logoSm(frame: CGRect, imageName: String) ->UIImageView{
+    func imagePos(frame: CGRect, imageName: String) ->UIImageView{
         let image = UIImage(named: imageName)
         let imageView = UIImageView(image: image)
         imageView.frame = frame
         view.addSubview(imageView)
         return imageView
     }
-    
-    func logoSm(xPos: CGFloat, yPos: CGFloat, width: CGFloat, height: CGFloat, imageName: String) ->UIImageView{
-        let imageView = logoSm(frame: CGRect(x: 0, y: 0, width: width, height: height), imageName: imageName);
+    func imagePos(xPos: CGFloat, yPos: CGFloat, width: CGFloat, height: CGFloat, imageName: String) ->UIImageView{
+        let imageView = imagePos(frame: CGRect(x: 0, y: 0, width: width, height: height), imageName: imageName);
         var xPos = xPos;
         if(xPos == 0.50){
             centerHorizontal(viewObj: imageView)
@@ -206,5 +205,156 @@ class UIController : UIViewController {
         }
         verticalByPercent(fromTop: yPos, viewObj: imageView)
         return imageView
+    }
+    
+    
+    
+    
+    func contBg(frame: CGRect, imageName: String) ->UIImageView{
+        let image = UIImage(named: imageName)
+        let imageView = UIImageView(image: image)
+        imageView.frame = frame
+        view.addSubview(imageView)
+        return imageView
+    }
+    func contBg(xPos: CGFloat, yPos: CGFloat, width: CGFloat, height: CGFloat, imageName: String) ->UIImageView{
+        let imageView = contBg(frame: CGRect(x: 0, y: 0, width: width, height: height), imageName: imageName);
+        var xPos = xPos;
+        if(xPos == 0.50){
+            centerHorizontal(viewObj: imageView)
+        }
+        else{
+            xPos = view.frame.width * xPos;
+            imageView.frame.origin.x = xPos;
+        }
+        verticalByPercent(fromTop: yPos, viewObj: imageView)
+        return imageView
+    }
+    
+    
+    
+    //Content Label 1
+    func contTx() -> UILabel{
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 115, height: 25))
+        //label.center = CGPoint(x: 160, y: 285)
+        label.textAlignment = .center
+        label.textColor = themColor
+        label.font = label.font?.withSize(18)
+        label.backgroundColor = UIColor(red: 81/255, green: 99/255, blue: 125/255, alpha: 0)
+        label.text = "GET START"
+        self.view.addSubview(label)
+        return label
+    }
+    //Content Label 2
+    func contTx2(frame: CGRect, imageName: String) -> UILabel{
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 133, height: 27))
+        label.textAlignment = .left
+        label.textColor = themColor
+        label.font = label.font?.withSize(18)
+        label.backgroundColor = UIColor(red: 81/255, green: 99/255, blue: 125/255, alpha: 0)
+        label.text = "You have need"
+        self.view.addSubview(label)
+        return label
+    }
+    func contTx2(xPos: CGFloat, yPos: CGFloat, width: CGFloat, height: CGFloat, imageName: String) ->UILabel{
+        let labelView = contTx2(frame: CGRect(x: 0, y: 0, width: width, height: height), imageName: imageName);
+        var xPos = xPos;
+        if(xPos == 0.50){
+            centerHorizontal(viewObj: labelView)
+        }
+        else{
+            xPos = view.frame.width * xPos;
+            labelView.frame.origin.x = xPos;
+        }
+        verticalByPercent(fromTop: yPos, viewObj: labelView)
+        return labelView
+    }
+    
+    //Content Label 3
+    func contTx3(frame: CGRect, imageName: String) -> UILabel{
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 240, height: 22))
+        label.textAlignment = .left
+        label.textColor = themColor
+        label.font = label.font?.withSize(15)
+        label.text = "A Valid California driving license"
+        self.view.addSubview(label)
+        return label
+    }
+    func contTx3(xPos: CGFloat, yPos: CGFloat, width: CGFloat, height: CGFloat, imageName: String) ->UILabel{
+        let labelView = contTx3(frame: CGRect(x: 0, y: 0, width: width, height: height), imageName: imageName);
+        var xPos = xPos;
+        if(xPos == 0.50){
+            centerHorizontal(viewObj: labelView)
+        }
+        else{
+            xPos = view.frame.width * xPos;
+            labelView.frame.origin.x = xPos;
+        }
+        verticalByPercent(fromTop: yPos, viewObj: labelView)
+        return labelView
+    }
+    
+    
+    //Content Label 4
+    func contTx4(frame: CGRect, imageName: String) -> UILabel{
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 240, height: 22))
+        label.textAlignment = .left
+        label.textColor = themColor
+        label.font = label.font?.withSize(15)
+        label.text = "A working call phone"
+        self.view.addSubview(label)
+        return label
+    }
+    func contTx4(xPos: CGFloat, yPos: CGFloat, width: CGFloat, height: CGFloat, imageName: String) ->UILabel{
+        let labelView = contTx4(frame: CGRect(x: 0, y: 0, width: width, height: height), imageName: imageName);
+        var xPos = xPos;
+        if(xPos == 0.50){
+            centerHorizontal(viewObj: labelView)
+        }
+        else{
+            xPos = view.frame.width * xPos;
+            labelView.frame.origin.x = xPos;
+        }
+        verticalByPercent(fromTop: yPos, viewObj: labelView)
+        return labelView
+    }
+    
+    //Content Label 5
+    func contTx5(frame: CGRect, imageName: String) -> UILabel{
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 240, height: 22))
+        label.textAlignment = .left
+        label.textColor = themColor
+        label.font = label.font?.withSize(15)
+        label.text = "A Valid debit card"
+        self.view.addSubview(label)
+        return label
+    }
+    func contTx5(xPos: CGFloat, yPos: CGFloat, width: CGFloat, height: CGFloat, imageName: String) ->UILabel{
+        let labelView = contTx5(frame: CGRect(x: 0, y: 0, width: width, height: height), imageName: imageName);
+        var xPos = xPos;
+        if(xPos == 0.50){
+            centerHorizontal(viewObj: labelView)
+        }
+        else{
+            xPos = view.frame.width * xPos;
+            labelView.frame.origin.x = xPos;
+        }
+        verticalByPercent(fromTop: yPos, viewObj: labelView)
+        return labelView
+    }
+    
+    
+    //Start Button
+    func startButton() -> UIButton{
+        let image = UIImage(named: "next-button-bg.png")
+        let button = UIButton(type: UIButtonType.system)
+        button.setBackgroundImage(image, for: UIControlState.normal)
+        //button.backgroundColor = themColor
+        button.tintColor = UIColor.white
+        button.setTitle("START", for: UIControlState.normal)
+        button.addTarget(self, action: #selector(GetStartedControler.overDraftProtactionButtonClick2), for: UIControlEvents.touchUpInside)
+        button.frame = CGRect(x: 0, y: 0, width: 285, height: 35)
+        view.addSubview(button)
+        return button
     }
 }

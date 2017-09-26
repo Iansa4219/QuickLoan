@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // @My Code
         window = UIWindow(frame: UIScreen.main.bounds)  // Define New Window
-        let initalView: InitialViewController = InitialViewController()
+        let initalView: GetStartedControler = GetStartedControler()
         window?.rootViewController = initalView  //Set View Controller which is an automaticaly generated class as our inatial view
         window?.makeKeyAndVisible()                     //This make the windows visible
         //========================
