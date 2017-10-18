@@ -18,12 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         
-        // @My Code
-        window = UIWindow(frame: UIScreen.main.bounds)  // Define New Window
-        let initalView: GetStartedControler = GetStartedControler()
-        window?.rootViewController = initalView  //Set View Controller which is an automaticaly generated class as our inatial view
-        window?.makeKeyAndVisible()                     //This make the windows visible
-        //========================
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let initialView: InitialViewController = InitialViewController()
+        window?.rootViewController = initialView
+        window?.makeKeyAndVisible()
         
         return true
     }

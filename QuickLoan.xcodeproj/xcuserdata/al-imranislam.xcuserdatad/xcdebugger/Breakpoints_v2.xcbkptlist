@@ -9,29 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "QuickLoan/Controller/UIController.swift"
-            timestampString = "527689341.384186"
+            filePath = "QuickLoan/ViewController.swift"
+            timestampString = "529483746.50522"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
-            landmarkName = "offerLabel()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "QuickLoan/View/InitialViewController.swift"
-            timestampString = "527686010.583489"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "InitialViewController"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "ViewController"
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,108 +25,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "QuickLoan/Controller/UIController.swift"
-            timestampString = "527689341.384186"
+            filePath = "QuickLoan/ViewController.swift"
+            timestampString = "529483757.413614"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
-            landmarkName = "offerLabel()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "QuickLoan/View/GetStartedControler.swift"
-            timestampString = "527948178.06427"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12"
-            landmarkName = "GetStartedControler"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "ViewController"
             landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "QuickLoan.GetStartedControler.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; QuickLoan.GetStartedControler"
-                  moduleName = "QuickLoan"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/al-imranhossain/Desktop/QuickLoan/QuickLoan/View/GetStartedControler.swift"
-                  timestampString = "527944278.596692"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "11"
-                  endingLineNumber = "11"
-                  offsetFromSymbolStart = "169">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "QuickLoan.GetStartedControler.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; QuickLoan.GetStartedControler"
-                  moduleName = "QuickLoan"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/al-imranhossain/Desktop/QuickLoan/QuickLoan/View/GetStartedControler.swift"
-                  timestampString = "527944278.598912"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "23">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "QuickLoan.GetStartedControler.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;QuickLoan.GetStartedControler&gt;"
-                  moduleName = "QuickLoan"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/al-imranhossain/Desktop/QuickLoan/QuickLoan/View/GetStartedControler.swift"
-                  timestampString = "527944278.601292"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "QuickLoan.GetStartedControler.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;QuickLoan.GetStartedControler&gt;"
-                  moduleName = "QuickLoan"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/al-imranhossain/Desktop/QuickLoan/QuickLoan/View/GetStartedControler.swift"
-                  timestampString = "527944278.603323"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "11"
-                  endingLineNumber = "11"
-                  offsetFromSymbolStart = "87">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "QuickLoan/View/GetStartedControler.swift"
-            timestampString = "528112483.548425"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
