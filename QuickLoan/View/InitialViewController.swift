@@ -48,24 +48,17 @@ class InitialViewController : UIController {
         let OverdraftProtectionButton = addButton(title: "Overdraft Protection", width: 200, height: 48, image: "button-lg")
         setVerticalByParent(yPos: 35, parentView: bottomLabel, viewObj: OverdraftProtectionButton)
         centerHorz(viewObj: OverdraftProtectionButton)
-
-
-
         
         
     }
 
-    
-    func testMe(){
-        print("Test Button is working")
-    }
     func howItWorksClicked(){
         print("How It Works")
     }
     
     
     func getStartedClicked(){
-        _ = WhiteBoxControl(parentView: view)
+        _ = GetStartedControl(parentView: view)
     }
     
 

@@ -276,7 +276,7 @@ class BaseControl : Defaults {
     }
 }
 
-class GetStartedControl: WhiteBoxControl {
+class GetStartedControl : WhiteBoxControl {
     
     override init(frame: CGRect){
         super.init(frame: frame)
@@ -288,18 +288,7 @@ class GetStartedControl: WhiteBoxControl {
     override init(parentView: UIView){
         //super.init(parentView: parentView)
         super.init(parentView: parentView)
-        
-      
-        
-        
-        instructionLabel = addLabel(text: "GET STARTED", lineNumbers: 1, fromTop: 1, fontSize: 24, parent: self, yPos: 25, pos: .toCenter)
-        setVerticalByPercent(fromTop: 0.08, viewObj: instructionLabel)
-        
-        seperatorIcon = addStaticImage(frame: CGRect(x: (frame.width / 2) - (56/2),
-                                                     y: instructionLabel.frame.origin.y+(padding*2),
-                                                     width: 56, height: 8), imageName: "underline.png")
-        
-        setVerticalByParent(yPos: 0.0, parentView: instructionLabel, viewObj: seperatorIcon)
+
         
         
         let youWillNeedLabel = addLabel(text: "You will need", lineNumbers: 1, fromTop: 0.20, fontSize: 16, parent: self, yPos: 25, pos: .toCenter)
@@ -313,57 +302,157 @@ class GetStartedControl: WhiteBoxControl {
         setVerticalByParent(yPos: 50, parentView: youWillNeedLabel, viewObj: list)
         setHorizontalByPercent(fromLeft: 0.05, position: .toLeft, anchor: .fromLeft, viewObj: list)
         
-        let getStartedButton = addButton(title: "NEXT", width: 320, height: 40, image: "next-button-bg.png")
+        let getStartedButton = addButton(title: "START", width: 320, height: 40, image: "next-button-bg.png")
+        getStartedButton.addTarget(self, action: #selector(GetStartedControl.getStartButtonClicked), for: .touchUpInside)
         setVerticalByPercent(fromTop: 0.09, viewObj: getStartedButton, pos: .fromBottom)
         centerHorz(viewObj: getStartedButton)
         
     }
+ 
+    func getStartButtonClicked(sender: UIButton){
+        print("Button is working")
+        //let scanDriverLicense: ScanDriversLicenseControl = ScanDriversLicenseControl(parentView: self.superview!);
+         _ = ScanDriversLicenseControl(parentView: self.superview!);
+    }
+    
 }
 
 
-class ScanDriversLicenseControl: BaseControl{
+class ScanDriversLicenseControl: WhiteBoxControl, UITextFieldDelegate{
+    
+    var driversLicense: UITextField = UITextField()
+    
     override init(frame: CGRect){
         super.init(frame: frame)
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override init(parentView: UIView){
+        super.init(parentView: parentView)
+        setInstructions(instructions: "Scan your driver's license")
+        centerHorz(viewObj: driversLicense)
+        setVerticalByPercent(fromTop: 0.50, viewObj: driversLicense)
+        driversLicense.frame.size.width = 100;
+        driversLicense.frame.size.height = 75
+        addSubview(driversLicense)
+        driversLicense.becomeFirstResponder()
+        driversLicense.delegate = self
+        
+        let getStartedButton = addButton(title: "NEXT", width: 320, height: 40, image: "next-button-bg.png")
+        getStartedButton.addTarget(self, action: #selector(ScanDriversLicenseControl.getStartButtonClicked), for: .touchUpInside)
+        setVerticalByPercent(fromTop: 0.09, viewObj: getStartedButton, pos: .fromBottom)
+        centerHorz(viewObj: getStartedButton)
+
+    }
+    func getStartButtonClicked(sender: UIButton){
+        print("Button is working")
+        //let scanDriverLicense: ScanDriversLicenseControl = ScanDriversLicenseControl(parentView: self.superview!);
+        _ = PhoneNumberControl(parentView: self.superview!);
+    }
 }
 
-class PhoneNumberControl: BaseControl{
+class PhoneNumberControl: WhiteBoxControl{
     override init(frame: CGRect){
         super.init(frame: frame)
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    override init(parentView: UIView){
+        super.init(parentView: parentView)
+        setInstructions(instructions: "Type in your phone number")
+        
+        
+        let getStartedButton = addButton(title: "NEXT", width: 320, height: 40, image: "next-button-bg.png")
+        getStartedButton.addTarget(self, action: #selector(PhoneNumberControl.getStartButtonClicked), for: .touchUpInside)
+        setVerticalByPercent(fromTop: 0.09, viewObj: getStartedButton, pos: .fromBottom)
+        centerHorz(viewObj: getStartedButton)
+    }
+    func getStartButtonClicked(sender: UIButton){
+        print("Button is working")
+        //let scanDriverLicense: ScanDriversLicenseControl = ScanDriversLicenseControl(parentView: self.superview!);
+        _ = VerifyControl(parentView: self.superview!);
+    }
 }
 
-class VerifyControl: BaseControl{
+class VerifyControl: WhiteBoxControl{
     override init(frame: CGRect){
         super.init(frame: frame)
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
+    
+    override init(parentView: UIView){
+        super.init(parentView: parentView)
+        setInstructions(instructions: "Verify your phone number")
+        
+        
+        let getStartedButton = addButton(title: "NEXT", width: 320, height: 40, image: "next-button-bg.png")
+        getStartedButton.addTarget(self, action: #selector(VerifyControl.getStartButtonClicked), for: .touchUpInside)
+        setVerticalByPercent(fromTop: 0.09, viewObj: getStartedButton, pos: .fromBottom)
+        centerHorz(viewObj: getStartedButton)
+    }
+    func getStartButtonClicked(sender: UIButton){
+        print("Button is working")
+        //let scanDriverLicense: ScanDriversLicenseControl = ScanDriversLicenseControl(parentView: self.superview!);
+        _ = DebitCardControl(parentView: self.superview!);
+    }
+    
 }
 
-class DebitCardControl: BaseControl{
+class DebitCardControl: WhiteBoxControl{
     override init(frame: CGRect){
         super.init(frame: frame)
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override init(parentView: UIView){
+        super.init(parentView: parentView)
+        setInstructions(instructions: "Type in your debit card info")
+        
+        
+        let getStartedButton = addButton(title: "NEXT", width: 320, height: 40, image: "next-button-bg.png")
+        getStartedButton.addTarget(self, action: #selector(DebitCardControl.getStartButtonClicked), for: .touchUpInside)
+        setVerticalByPercent(fromTop: 0.09, viewObj: getStartedButton, pos: .fromBottom)
+        centerHorz(viewObj: getStartedButton)
+    }
+    func getStartButtonClicked(sender: UIButton){
+        print("Button is working")
+        //let scanDriverLicense: ScanDriversLicenseControl = ScanDriversLicenseControl(parentView: self.superview!);
+        _ = SelectCashControl(parentView: self.superview!);
+    }
 }
 
-class SelectCashControl: BaseControl{
+class SelectCashControl: WhiteBoxControl{
     override init(frame: CGRect){
         super.init(frame: frame)
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override init(parentView: UIView){
+        super.init(parentView: parentView)
+        setInstructions(instructions: "Select your cash")
+        
+        
+        let getStartedButton = addButton(title: "NEXT", width: 320, height: 40, image: "next-button-bg.png")
+        //getStartedButton.addTarget(self, action: #selector(SelectCashControl.getStartButtonClicked), for: .touchUpInside)
+        setVerticalByPercent(fromTop: 0.09, viewObj: getStartedButton, pos: .fromBottom)
+        centerHorz(viewObj: getStartedButton)
+    }
+//    func getStartButtonClicked(sender: UIButton){
+//        print("Button is working")
+//        //let scanDriverLicense: ScanDriversLicenseControl = ScanDriversLicenseControl(parentView: self.superview!);
+//        _ = VerifyControl(parentView: self.superview!);
+//    }
 }
 
 
